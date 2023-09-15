@@ -1,0 +1,33 @@
+.wave-div {
+  width: 200px;
+  height: 200px;
+  background-color: #0099cc;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 50px; /* Điều chỉnh chiều cao của sóng */
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  background-size: 100% 20px;
+  top: 0;
+  left: 0;
+  animation: wave-animation 1s linear infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Điều chỉnh độ cao sóng */
+  }
+}
